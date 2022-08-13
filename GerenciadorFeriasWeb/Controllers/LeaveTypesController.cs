@@ -64,6 +64,7 @@ namespace GerenciadorFeriasWeb.Controllers
             {
                 var leaveType = mapper.Map<LeaveType>(leaveTypeVM);
                 _context.Add(leaveType);
+
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
