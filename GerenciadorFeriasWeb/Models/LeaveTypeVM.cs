@@ -10,6 +10,7 @@ namespace GerenciadorFeriasWeb.Models
         public string Name { get; set; }
         [Display(Name = "Dias de Ausência")]
         [Required]
+        [Range(1,180, ErrorMessage = "Digite um número válido entre 1 e 180")]
         public int DefaultDays { get; set; }
     }
 }
